@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM Remover</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="root">
+        <header>
+            <h1>DOM Remover</h1>
+            <div class="sub">Save multiple CSS selectors — remove instantly or automatically</div>
+        </header>
+
+        <section class="add-area">
+            <input id="selectorInput" type="text" placeholder="e.g. .banner, #modal, div.popup" />
+            <button id="addSelectorBtn" class="btn primary">Add</button>
+        </section>
+
+        <section class="list-area">
+            <div class="list-head">
+                <strong>Saved selectors</strong>
+                <span id="count">0</span>
+            </div>
+            <ul id="selectorList"></ul>
+        </section>
+
+        <section class="controls">
+            <button id="removeNowBtn" class="btn danger large">Remove Now (active tab)</button>
+
+            <div class="row">
+                <label class="switch">
+                    <input type="checkbox" id="enableToggle">
+                    <span class="slider"></span>
+                </label>
+                <div id="toggleLabel">Enabled</div>
+            </div>
+
+            <div class="row small">
+                <button id="exportBtn" class="btn small">Export</button>
+                <button id="importBtn" class="btn small">Import</button>
+            </div>
+
+            <div class="row"><i>If expected output didn't work, try pressing F12 or CTRL + SHIFT + I to open developer
+                    tools.</i></div>
+
+            <div id="status" class="status"></div>
+        </section>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

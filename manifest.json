@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "DOM Remover",
+  "version": "1.2",
+  "description": "Remove elements from pages using saved CSS selectors.",
+  "permissions": ["storage", "scripting", "tabs"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
